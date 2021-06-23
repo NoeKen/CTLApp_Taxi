@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 
-const TasksPage = () => {
+const Setting = () => {
   return (
     <SafeAreaView>
-        <Text>Tasks</Text>
+        <Text>Setting</Text>
     </SafeAreaView>
   );
 };
 
-export default TasksPage;
+export default Setting;Setting

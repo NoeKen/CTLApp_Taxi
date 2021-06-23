@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 
-const ProfilePage = () => {
+const Transaction = () => {
   return (
     <SafeAreaView>
-        <Text>Profile</Text>
+        <Text>Transaction</Text>
     </SafeAreaView>
   );
 };
 
-export default ProfilePage;
+export default Transaction;

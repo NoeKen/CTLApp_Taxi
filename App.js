@@ -2,11 +2,13 @@ import React from 'react';
 import {StatusBar, Text, StyleSheet, horizontal} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ProfilePage from './pages/profile';
-import TasksPage from './pages/tasks';
+import TasksPage from './pages/task/tasks';
 import DashboardPage from './pages/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { size } from 'lodash';
+//import ProfilePage from './pages/profile/profile_page';
+import Profile from './pages/profile/profile';
+
+
 const App = () => {
 
   const Tab = createBottomTabNavigator();
@@ -20,7 +22,7 @@ const App = () => {
               let icon;
               // Set different 'icons' for each route
               if (route.name === 'Dashboard') {
-                icon = <Icon name="gauge-simple" size={20} color= {color} />
+                icon = <Icon name="home" size={20} color= {color} />
               } else if (route.name === 'Tasks') {
                 icon = <Icon name="list" size={15} color= {color} />
               } else if (route.name === 'Profile') {
@@ -38,7 +40,7 @@ const App = () => {
           }}>
           <Tab.Screen name="Dashboard" component={DashboardPage} />
           <Tab.Screen name="Tasks" component={TasksPage} />
-          <Tab.Screen name="Profile" component={ProfilePage} />
+          <Tab.Screen name="Profile" component={Profile} />
         </Tab.Navigator>
       </NavigationContainer>
     </>
