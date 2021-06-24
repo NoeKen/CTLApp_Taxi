@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View , TextInput, TouchableOpacity} from 'react-native';
 import { Avatar } from 'react-native-paper';
 
- class LoginPage extends React.Component{
+ class SignupPage extends React.Component{
  
     state={
       email:"",
@@ -13,10 +13,8 @@ import { Avatar } from 'react-native-paper';
     return (
       
       <View style={styles.container}>
-        <View >
-          <Text style = {styles.Title}>
-            WELCOME
-          </Text>
+        <View style = {styles.avatar}>
+        <Avatar.Image size={150} source={require('../assets/images.jpeg')} />
         </View>
         <View style={styles.inputView} >
           <TextInput  
@@ -41,7 +39,9 @@ import { Avatar } from 'react-native-paper';
         <TouchableOpacity>
           <Text style={styles.signupText}>Signup</Text>
         </TouchableOpacity>
-        
+        <TouchableOpacity>
+          <Text style={styles.signupText}>Already have a client account ?</Text>
+        </TouchableOpacity>
       </View>
     ); 
     }
@@ -94,14 +94,11 @@ const styles = StyleSheet.create({
   },
   signupText :{
     color : 'black',
-  },
-  Title : {
-    marginBottom: 50,
-    fontSize : 45,
-    color : '#465881',
-    fontFamily : 'arial',
-    fontWeight : 'bold',
+    margin : 5,
+},
+  avatar : {
+    marginBottom: 25,
   }
 });
 
-export default LoginPage;
+export default SignupPage;

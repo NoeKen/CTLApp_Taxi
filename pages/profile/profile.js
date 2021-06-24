@@ -8,5 +8,4 @@ const Profile = () => {
     </SafeAreaView>
   );
 };
-
 export default Profile;

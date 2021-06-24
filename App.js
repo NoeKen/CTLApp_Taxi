@@ -7,6 +7,9 @@ import DashboardPage from './pages/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome';
 //import ProfilePage from './pages/profile/profile_page';
 import Profile from './pages/profile/profile';
+import {LogBox } from 'react-native';
+LogBox.ignoreLogs(['Reanimated 2']);
+
 
 
 const App = () => {
