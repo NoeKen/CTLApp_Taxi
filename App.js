@@ -3,10 +3,10 @@ import {StatusBar, Text, StyleSheet, horizontal} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TasksPage from './pages/task/tasks';
-import DashboardPage from './pages/dashboard';
+import DashboardPage from './pages/main/dashboard/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome';
 //import ProfilePage from './pages/profile/profile_page';
-import Profile from './pages/profile/profile';
+import Profile from './pages/main/profiles/profile/profile';
 import {LogBox } from 'react-native';
 LogBox.ignoreLogs(['Reanimated 2']);
 
