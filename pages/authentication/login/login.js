@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View , TextInput, TouchableOpacity} from 'react-native';
 
+
+
  class LoginPage extends React.Component{
  
     state={
@@ -38,14 +40,15 @@ import { StyleSheet, Text, View , TextInput, TouchableOpacity} from 'react-nativ
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.signupText}>Signup</Text>
+          <Text style={styles.signupText}
+            
+          >Signup</Text>
         </TouchableOpacity>
         
       </View>
     ); 
     }
 }
-
 
 
 const styles = StyleSheet.create({

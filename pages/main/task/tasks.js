@@ -1,12 +1,12 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import VehiclesList from './vehicules_list';
-import Transaction from './transactions';
-import ClientsList from './clients_list';
-import Icon from 'react-native-vector-icons/FontAwesome';
+/*import VehiclesList from '../task/vehiculesList/vehicules_list';
+import Transaction from '../task/transactions/transactions';*/
+import ClientsList from './clientsList/clients_list';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import LoginPage from '../login';
-import SignupPage from '../signup';
+import LoginPage from '../../authentication/login/login';
+import SignupPage from '../../authentication/registration/signup';
 
 
 const Tab = createMaterialBottomTabNavigator();
