@@ -6,6 +6,7 @@ import ProfilePage from './main/profiles/profile/profile';
 import TasksPage from './main/task/tasks';
 import DashboardPage from './main/dashboard/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Transaction from './main/task/transactions/transactions';
 
 
 const navPages = () => {
@@ -21,7 +22,7 @@ const navPages = () => {
               let icon;
               // Set different 'icons' for each route
               if (route.name === 'Dashboard') {
-                icon = <Icon name="gauge-simple" size={20} color= {color} />
+                icon = <Icon name="home" size={20} color= {color} />
               } else if (route.name === 'Tasks') {
                 icon = <Icon name="list" size={15} color= {color} />
               } else if (route.name === 'Profile') {
@@ -38,7 +39,7 @@ const navPages = () => {
             inactiveTintColor: 'grey',
           }}>
           <Tab.Screen name="Dashboard" component={DashboardPage} />
-          <Tab.Screen name="Tasks" component={TasksPage} />
+          <Tab.Screen name="Tasks" component={Transaction} />
           <Tab.Screen name="Profile" component={ProfilePage} />
         </Tab.Navigator>
    
