@@ -15,7 +15,7 @@ import { StyleSheet, Text, View , TextInput, TouchableOpacity} from 'react-nativ
       <View style={styles.container}>
         <View >
           <Text style = {styles.Title}>
-            WELCOME
+            WELCOME TO YOU !
           </Text>
         </View>
         <View style={styles.inputView} >
