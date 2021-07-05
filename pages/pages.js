@@ -1,15 +1,13 @@
 import React from 'react';
 import {StatusBar, Text} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ProfilePage from './main/profiles/profile/profile';
-import TasksPage from './main/task/tasks';
 import DashboardPage from './main/dashboard/dashboard';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Transaction from './main/task/transactions/transactions';
 
 
-const navPages = () => {
+const NavPages = () => {
 
   const Tab = createBottomTabNavigator();
 
@@ -47,4 +45,4 @@ const navPages = () => {
   );
 };
 
-export default navPages;
+export default NavPages;

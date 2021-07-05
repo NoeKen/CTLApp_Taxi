@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     container: {
     flex: 1,
     backgroundColor: 'white',
-    alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal : 20,
   },
   logo:{
     fontWeight:"bold",
@@ -17,20 +17,22 @@ const styles = StyleSheet.create({
     marginBottom:40
   },
   inputView:{
-    width:"80%",
-    backgroundColor:"#465881",
-    borderRadius:25,
-    height:50,
+    width:"100%",
+    backgroundColor:"#FFE4E1",
+    borderRadius:10,
+    height:65,
     marginBottom:20,
     justifyContent:"center",
-    padding:20
   },
   inputText:{
-    height:50,
-    color:"white"
+    paddingHorizontal : 20,
+    color:"black",
+    fontSize : 20,
   },
   forgot:{
-    color:"black",
+    color:"#fd6c9e",
+    alignItems : 'flex-end',
+    
   },
   loginBtn:{
     width:"80%",
