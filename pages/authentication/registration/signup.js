@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View , TextInput, TouchableOpacity} from 'react-native';
+import {Text, View , TextInput, TouchableOpacity} from 'react-native';
 import { Avatar } from 'react-native-paper';
+import styles from './style';
 
  class SignupPage extends React.Component{
  
@@ -14,14 +15,14 @@ import { Avatar } from 'react-native-paper';
         return (
         
             <View style={styles.container}>
-                <View style = {styles.avatar}>
+               
+                 <TouchableOpacity >
+                    <Text style ={styles.Title}>Stop missing !</Text>
+                </TouchableOpacity>
 
-                    <Avatar.Image 
-                        size={150} 
-                        source={this.state.photo} 
-                    />
-
-                </View>
+                 <TouchableOpacity >
+                    <Text style ={styles.subTitle}>Not yet a member ? create an account {'\n'}right away</Text>
+                </TouchableOpacity>
 
                 <View style={styles.inputView} >
                     
@@ -43,20 +44,12 @@ import { Avatar } from 'react-native-paper';
                     />
                 </View>
 
-                <TouchableOpacity>
-                    <Text style={styles.forgot}>Forgot Password?</Text>
+                <TouchableOpacity style ={styles.clientView}>
+                    <Text style={styles.client}>Already have a client account ?</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.loginBtn}>
-                    <Text style={styles.loginText}>LOGIN</Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity>
-                    <Text style={styles.signupText}>Signup</Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity>
-                    <Text style={styles.signupText}>Already have a client account ?</Text>
+                <TouchableOpacity style={styles.registerBtn}>
+                    <Text style={styles.registerText}>Create Account</Text>
                 </TouchableOpacity>
             
             </View>
@@ -66,56 +59,5 @@ import { Avatar } from 'react-native-paper';
 
 
 
-    const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    logo:{
-        fontWeight:"bold",
-        fontSize:50,
-        color:"#fb5b5a",
-        marginBottom:40
-    },
-    inputView:{
-        width:"80%",
-        backgroundColor:"#465881",
-        borderRadius:25,
-        height:50,
-        marginBottom:20,
-        justifyContent:"center",
-        padding:20
-    },
-    inputText:{
-        height:50,
-        color:"white"
-    },
-    forgot:{
-        color:"black",
-        fontSize:11
-    },
-    loginBtn:{
-        width:"80%",
-        backgroundColor:"#fb5b5a",
-        borderRadius:25,
-        height:50,
-        alignItems:"center",
-        justifyContent:"center",
-        marginTop:40,
-        marginBottom:10
-    },
-    loginText:{
-        color : 'white',
-    },
-    signupText :{
-        color : 'black',
-        margin : 5,
-    },
-    avatar : {
-        marginBottom: 25,
-    }
-    });
 
 export default SignupPage;

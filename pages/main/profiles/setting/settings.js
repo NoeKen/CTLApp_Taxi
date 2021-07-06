@@ -9,4 +9,4 @@ const Setting = () => {
   );
 };
 
-export default Setting;Setting
+export default Setting;
