@@ -12,9 +12,9 @@ const Welcome = ({navigation}) =>{
             <View style = {styles.container}>
                 <Text style = { styles.nameApp}>CTLTaxi App</Text>
                 <Avatar.Image 
-                        size={180} 
-                        source={require ('../../../assets/Taxi.jpg')} 
-                    />
+                    size={180} 
+                    source={require ('../../../assets/Taxi.jpg')} 
+                />
                 <TouchableOpacity
                 style = {styles.buttonsLogin}
                     onPress = {() => navigation.navigate('Login')}

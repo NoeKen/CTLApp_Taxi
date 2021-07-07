@@ -28,7 +28,8 @@ import styles from './style';
                     
                     <TextInput  
                         style={styles.inputText}
-                        placeholder="Email..." 
+                        placeholder="Email" 
+                        numberOfLines={1}
                         placeholderTextColor="#003f5c"
                         onChangeText={text => this.setState({email:text})}
                     />
@@ -38,7 +39,8 @@ import styles from './style';
                 <View style={styles.inputView} >
                     <TextInput  
                         style={styles.inputText}
-                        placeholder="Password..." 
+                        placeholder="Password"
+                        numberOfLines={1} 
                         placeholderTextColor="#003f5c"
                         onChangeText={text => this.setState({password:text})}
                     />
@@ -48,7 +50,10 @@ import styles from './style';
                     <Text style={styles.client}>Already have a client account ?</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.registerBtn}>
+                <TouchableOpacity 
+                    style={styles.registerBtn}
+                    onPress = {()=> this.props.navigation.navigate("SetProfile")}
+                    >
                     <Text style={styles.registerText}>Create Account</Text>
                 </TouchableOpacity>
             

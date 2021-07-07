@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         alignItems : 'center',
     },
     nameApp : {
-        color : 'rgb(250,30,120)',
+        color : '#FF237B',
         fontFamily : 'serif',
         margin : 50,
         fontSize : 30,
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         fontSize : 25,
     },
     buttonsLogin:{
-        backgroundColor : 'rgb(250,30,120)',
+        backgroundColor : '#FF237B',
         width:"80%",
         borderRadius:40,
         height:75,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
     },
     buttonsRegister:{
-        backgroundColor : '#6600FF',
+        backgroundColor : '#4E23FF',
         width:"80%",
         borderRadius:40,
         height:75,

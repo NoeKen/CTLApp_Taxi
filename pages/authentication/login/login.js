@@ -26,7 +26,8 @@ import styles from './style'
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
-            placeholder="Email..." 
+            placeholder="Email"
+            numberOfLines={1} 
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({email:text})}/>
         </View>
@@ -34,12 +35,15 @@ import styles from './style'
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
-            placeholder="Password..." 
+            placeholder="Password"
+            numberOfLines={1}
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({password:text})}/>
         </View>
 
-        <TouchableOpacity style={styles.forgot}>
+        <TouchableOpacity style={styles.forgot}
+          onPress = {()=> navigation.navigate('resetPass')}
+        >
           <Text style={styles.forgotText} >Forgot Password?</Text>
         </TouchableOpacity>
 
@@ -47,7 +51,7 @@ import styles from './style'
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.loginBtn} onPress = {() => navigation.navigate.goBack}>
+        <TouchableOpacity style={styles.loginBtn} onPress = {() => navigation.navigate.goBack()}>
           <Text style={styles.loginText}>Go Back</Text>
         </TouchableOpacity>
       </View>

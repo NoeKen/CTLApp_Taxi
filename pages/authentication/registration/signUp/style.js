@@ -8,7 +8,7 @@ import {StyleSheet} from 'react-native'
         paddingHorizontal : 20,
     },
     Title : {
-        color : 'rgb(250,30,120)',
+        color : '#FF237B',
         fontSize : 40,
         fontWeight : 'bold',
         alignItems : 'center',
@@ -18,7 +18,7 @@ import {StyleSheet} from 'react-native'
     },
     subTitle : {
         marginBottom: 50,
-        fontSize : 21,
+        fontSize : 20,
         color : 'black',
         fontFamily : 'arial',
         fontWeight : 'bold',
@@ -42,13 +42,13 @@ import {StyleSheet} from 'react-native'
         marginTop : 10,
     },
     client:{
-        color : 'rgb(250,30,120)',
+        color : '#FF237B',
         fontSize : 20,
         fontWeight :'bold',
     },
     registerBtn:{
         width:"100%",
-        backgroundColor: 'rgb(250,30,120)',
+        backgroundColor: '#FF237B',
         borderColor :'black',
         borderStyle : 'solid',
         borderWidth : 1,
