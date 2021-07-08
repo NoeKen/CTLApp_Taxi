@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     paddingHorizontal : 20,
+    marginTop : -20
   },
   logo:{
     fontWeight:"bold",
@@ -55,7 +56,6 @@ const styles = StyleSheet.create({
   loginText:{
     color : 'white',
     fontSize : 30,
-    fontWeight :'bold',
   },
   signupText :{
     color : 'black',

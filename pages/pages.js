@@ -20,9 +20,9 @@ const NavPages = () => {
               let icon;
               // Set different 'icons' for each route
               if (route.name === 'Dashboard') {
-                icon = <Icon name="home" size={20} color= {color} />
+                icon = <Icon name="dashboard" size={20} color= {color} />
               } else if (route.name === 'Tasks') {
-                icon = <Icon name="list" size={15} color= {color} />
+                icon = <Icon name="list" size={15} color= "{color}" />
               } else if (route.name === 'Profile') {
                 icon = <Icon name="user" size={20} color= {color} />
               }
@@ -32,9 +32,9 @@ const NavPages = () => {
             },
           })}
           tabBarOptions={{
-            activeBackgroundColor: 'grey',
-            activeTintColor: 'blue',
-            inactiveTintColor: 'grey',
+            activeBackgroundColor: '#ff237b',
+            activeTintColor: 'white',
+            inactiveTintColor: 'black',
           }}>
           <Tab.Screen name="Dashboard" component={DashboardPage} />
           <Tab.Screen name="Tasks" component={Transaction} />

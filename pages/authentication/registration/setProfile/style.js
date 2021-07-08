@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:50,
         color:"#fb5b5a",
-        marginBottom:40,
+        marginBottom: 30,
         alignItems : 'center',
         
     },
@@ -37,12 +37,11 @@ const styles = StyleSheet.create({
     fontSize : 30,
     fontWeight : 'bold',
     alignItems : 'center',
-    marginBottom : 30,
-    marginTop : 10,
+    marginBottom : 50,
     textAlign : 'center'
   },
   subTitle : {
-    marginBottom: 40,
+    marginBottom: 20,
     fontSize : 20,
     color : 'black',
     fontFamily : 'arial',
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     borderStyle : 'solid',
     borderWidth : 1,
     borderRadius:15,
-    height:55,
+    height:45,
     justifyContent:"center",
     alignItems : 'center',
   },

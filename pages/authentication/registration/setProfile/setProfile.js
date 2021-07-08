@@ -20,9 +20,7 @@ import styles from '../setProfile/style';
                     <Text style ={styles.Title}>Configure your account</Text>
                 </TouchableOpacity>
 
-                 <TouchableOpacity >
-                    <Text style ={styles.subTitle}>Set up your profile</Text>
-                </TouchableOpacity>
+
 
                 <View style = {styles.logo}>
                     <Avatar.Image 
@@ -64,7 +62,7 @@ import styles from '../setProfile/style';
                     style={styles.registerBtn}
                     onPress ={() => this.props.navigation.navigate('emailVerification')}
                     >
-                    <Text style={styles.registerText}>Create Account</Text>
+                    <Text style={styles.registerText}>SAVE</Text>
                 </TouchableOpacity>
             
             </View>
