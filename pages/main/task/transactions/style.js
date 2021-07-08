@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%',
     backgroundColor: 'white',
-    padding: 10
+    padding: 10,
+    backgroundColor: 'magenta',
   },
   container: {
     flexDirection: 'row',
@@ -18,9 +19,12 @@ const styles = StyleSheet.create({
     alignItems:'center',
     borderRadius: 10,
     shadowColor: 'black',
-    elevation: 6
-
+    elevation: 6,
+    minHeight: 60,
+    minWidth: 280,
+    position: 'absolute',
   },
+
   taxiText: {
     fontSize: 25,
     fontWeight: 'bold',
@@ -73,74 +77,16 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 20
+  },
+  destext: {
+    color: 'white',
+  },
+
+  //styles for the mp board
+  board: {
+    // backgroundColor: 'magenta',
+    flex: 1
   }
 
-
-//   logo:{
-//     fontWeight:"bold",
-//     fontSize:50,
-//     color:"#fb5b5a",
-//     marginBottom:40
-//   },
-//   inputView:{
-//     width:"100%",
-//     backgroundColor:"#FFE4E1",
-//     borderRadius:10,
-//     height:65,
-//     marginBottom:20,
-//     justifyContent:"center",
-//   },
-//   inputText:{
-//     paddingHorizontal : 20,
-//     color:"black",
-//     fontSize : 20,
-//   },
-//   forgot:{
-
-//     alignItems : 'flex-end',
-//     justifyContent : 'center',
-//   },
-//   forgotText:{
-//     color:"rgb(250,30,120)",
-//     fontSize : 25,
-//     fontWeight :'bold',
-//   },
-//   loginBtn:{
-//     width:"100%",
-//     backgroundColor: 'rgb(250,30,120)',
-//     borderColor :'black',
-//     borderStyle : 'solid',
-//     borderWidth : 1,
-//     borderRadius:40,
-//     height:75,
-//     justifyContent:"center",
-//     alignItems : 'center',
-//     marginTop:40,
-//     marginBottom:10
-//   },
-//   loginText:{
-//     color : 'white',
-//     fontSize : 30,
-//     fontWeight :'bold',
-//   },
-//   signupText :{
-//     color : 'black',
-//   },
-//   Title : {
-//     color : 'rgb(250,30,120)',
-//     fontSize : 40,
-//     fontWeight : 'bold',
-//     alignItems : 'center',
-//     marginBottom : 50,
-//     marginTop : 80,
-//     textAlign : 'center'
-//   },
-//   SubTitle : {
-//     marginBottom: 50,
-//     fontSize : 25,
-//     color : '#465881',
-//     fontFamily : 'arial',
-//     fontWeight : 'bold',
-//   }
 });
 export default styles;

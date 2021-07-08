@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Image,TouchableOpacity } from 'react-native';
 import styles from './style.js';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ClientsList = ({navigation}) => {
   return (
@@ -19,6 +20,12 @@ const ClientsList = ({navigation}) => {
           <Text style={styles.numText}>695233625</Text>
         </View>
       </View>
+
+      <TouchableOpacity
+          style={styles.transAct}
+          onPress={() => navigation.navigate('ClientForm')}>
+          <Icon name="plus" size={20} color="white" />
+        </TouchableOpacity>
     </View>
   );
 };

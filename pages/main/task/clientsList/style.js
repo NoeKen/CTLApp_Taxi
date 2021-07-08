@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     shadowColor: 'black',
     elevation: 6,
+    marginBottom: 10
   },
 
   backgroundImage: {
@@ -47,7 +48,19 @@ const styles = StyleSheet.create({
       color: 'black',
     fontWeight: 'bold',
     fontSize: 16
-  }
+  },
+  transAct: {
+    position: 'absolute',
+    width: 50,
+    height: 50,
+    backgroundColor: 'rgb(250,30,120)',
+    right: 15,
+    bottom: 20,
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems : 'center',
+},
+
 
   
 });
