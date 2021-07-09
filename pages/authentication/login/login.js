@@ -4,6 +4,7 @@ import styles from './style'
 
 import auth from '@react-native-firebase/auth';
 import { firebase } from '@react-native-firebase/firestore';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
  
 class LoginPage extends React.Component{
@@ -82,6 +83,7 @@ class LoginPage extends React.Component{
         <TouchableOpacity style={styles.loginBtn} onPress = {() => this.login(this.state.email,this.state.password)}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
+      
 
         <Button
           title = "Back to main"

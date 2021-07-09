@@ -24,13 +24,13 @@ const Transaction = ({navigation}) => {
   return (
     <View style={styles.maine}>
       <View style={styles.cont}>
-        <View style={styles.container}>
+        <View style={styles.container} onPress={() => navigation.navigate('VehiculesList')}>
           <View style={styles.taxiname}>
             <Text style={styles.taxiText}>Active Taxi Name</Text>
           </View>
           <TouchableOpacity
             style={styles.taximg}
-            onPress={() => navigation.navigate('VehiculesList')}>
+            >
             <Image
               source={require('../../../../assets/images.jpeg')}
               style={styles.backgroundImage}
@@ -39,8 +39,7 @@ const Transaction = ({navigation}) => {
         </View>
       </View>
 
-      <Text>My Map is here {'\n\n\n\n\n\n\n'} and text </Text>
-
+      
       <View style={mystyles.container}>
         <MapView
           provider={PROVIDER_GOOGLE} // remove if not using Google Maps
