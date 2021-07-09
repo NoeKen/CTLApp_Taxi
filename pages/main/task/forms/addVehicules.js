@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View, TextInput, TouchableOpacity, Button} from 'react-native';
+import {Text, View, TextInput, TouchableOpacity, Button, ScrollView} from 'react-native';
 import styles from './style';
+import { Avatar } from 'react-native-paper';
 
 import database from '@react-native-firebase/database';
 
@@ -14,7 +15,7 @@ class ClientForm extends React.Component {
 
     database().ref("clients")
     .push({
-      email: email,
+      imatriculation: email,
       name : name,
       phone :phone
     })
@@ -32,25 +33,22 @@ class ClientForm extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
+        <ScrollView>
         <Text style = {styles.Title}>
-            Add Client !!
+            Add Taxi !!
           </Text>
+          <View style = {styles.logo}>
+                    <Avatar.Image 
+                        
+                        size={150} 
+                        source={require ('../../../../assets/Taxi.jpg')} 
+                    />
+                </View>
 
         <View style={styles.inputView}>
           <TextInput
             style={styles.inputText}
-            placeholder="Email"
-            keyboardType ='email-address'
-            placeholderTextColor="#003f5c"
-            onChangeText={email => this.setState({email: email})}
-          />
-        </View>
-
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.inputText}
-            placeholder="Nom et Prenom"
+            placeholder="Imatriculation"
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({name: text})}
           />
@@ -59,10 +57,9 @@ class ClientForm extends React.Component {
         <View style={styles.inputView}>
           <TextInput
             style={styles.inputText}
-            placeholder="Telephone"
+            placeholder="Couleur"
             keyboardType ='phone-pad'
             numberOfLines={1}
-            keyboardType = 'phone-pad'
             placeholderTextColor="#003f5c"
             onChangeText={tel => this.setState({number: tel})}
           />
@@ -83,6 +80,7 @@ class ClientForm extends React.Component {
         >
           <Text style={styles.textLogin}>Cancel</Text>
         </TouchableOpacity>
+        </ScrollView>
       </View>
     );
   }

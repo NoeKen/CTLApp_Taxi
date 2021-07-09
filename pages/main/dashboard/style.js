@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     maine: {
         height: '100%',
         width: '100%',
+        alignItems : 'center',
     backgroundColor: 'white',
     padding: 10,
     // backgroundColor: 'rgba(250,30,120,0.2)',
   },
   titre: {
-    margin: 10,
-    flexDirection: 'row',
+    margin: 25,
     justifyContent: 'center',
-    width: 280,
     padding: 5,
+    alignContent : 'center',
     minHeight: 50,
     marginBottom: 0
   },
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     width: '70%',
     textAlign: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: 20,
 
 
   },

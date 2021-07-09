@@ -4,7 +4,12 @@ import styles from './style';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Avatar} from 'react-native-paper';
 
+import auth from '@react-native-firebase/auth'
+import firestore from '@react-native-firebase/firestore';
+
 const Profile = ({navigation}) => {
+
+
   return (
     <View style={styles.maine}>
       <View style={styles.titre}>

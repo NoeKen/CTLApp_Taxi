@@ -26,7 +26,7 @@ import firestore from '@react-native-firebase/firestore';
               phone : phone,
               image :this.state.image,
               email :auth().currentUser.email
-          })
+          }).then(()=>this.props.navigation.navigate('emailVerification'))
       }
 
     render(){

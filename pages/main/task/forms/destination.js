@@ -8,6 +8,9 @@ class Destination extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style = {styles.Title}>
+            Hey, set your destination
+          </Text>
         <View style={styles.inputView}>
           <Text style={styles.inputText}> Ma Position</Text>
         </View>
@@ -20,8 +23,10 @@ class Destination extends React.Component {
             onChangeText={name => this.setState({names: name})}
           />
         </View>
-
-        <Button title="Lets GO" onPress={() => alert('Pressed')} />
+        <TouchableOpacity style={styles.loginBtn} onPress={() => alert('Pressed')}>
+          <Text style={styles.loginText}>Lets go</Text>
+        </TouchableOpacity>
+      
       </View>
     );
   }

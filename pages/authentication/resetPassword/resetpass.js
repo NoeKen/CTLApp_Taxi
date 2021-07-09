@@ -2,6 +2,8 @@ import React from 'react';
 import {Text, View , TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
 
+import auth from '@react-native-firebase/auth';
+
  class resetPass extends React.Component{
  
     state={

@@ -33,6 +33,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal : 20,
   },
+  logo:{
+    fontWeight:"bold",
+    fontSize:50,
+    color:"#fb5b5a",
+    marginBottom: 30,
+    alignItems : 'center',
+    
+},
   photo: {
     marginHorizontal: 'auto', 
     width:150,
@@ -50,6 +58,23 @@ const styles = StyleSheet.create({
     alignItems:"center",
     justifyContent:"center",
     marginTop: 20,
+},
+loginBtn:{
+  width:"100%",
+  backgroundColor: 'rgb(250,30,120)',
+  borderColor :'black',
+  borderStyle : 'solid',
+  borderWidth : 1,
+  borderRadius:40,
+  height:75,
+  justifyContent:"center",
+  alignItems : 'center',
+  marginTop:40,
+  marginBottom:10
+},
+loginText:{
+  color : 'white',
+  fontSize : 30,
 },
 buttonsRegister:{
   backgroundColor : '#4E23FF',

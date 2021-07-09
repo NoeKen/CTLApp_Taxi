@@ -13,7 +13,6 @@ import { firebase } from '@react-native-firebase/firestore';
         this.state={
           email:"",
           password:"",
-          isLoading : false
         };
       }
       
@@ -27,7 +26,7 @@ import { firebase } from '@react-native-firebase/firestore';
                 alert('Enter at least height caracters');
                 }else{
                     auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
-                    auth().currentUser.sendEmailVerification().then(()=>this.props.navigation.navigate('emailVerification'))
+                    .then(auth().currentUser.sendEmailVerification())
                     this.props.navigation.navigate('SetProfile')
                 }
             }
