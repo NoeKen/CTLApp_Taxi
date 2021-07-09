@@ -1,11 +1,14 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text ,View} from 'react-native';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import {StyleSheet} from 'react-native';
+
 
 const DashboardPage = () => {
   return (
-    <SafeAreaView>
-        <Text>Dashboard</Text>
-    </SafeAreaView>
+    <View>
+    
+  </View>
   );
 };
 
