@@ -47,7 +47,8 @@ import styles from './style'
           <Text style={styles.forgotText} >Forgot Password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.loginBtn} onPress = {() => navigation.navigate("navPages")}>
+        <TouchableOpacity style={styles.loginBtn} 
+          onPress = {() => navigation.navigate("navPages")}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
         
