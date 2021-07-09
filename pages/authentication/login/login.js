@@ -82,7 +82,12 @@ class LoginPage extends React.Component{
           <Text style={styles.forgotText} >Forgot Password?</Text>
         </TouchableOpacity>
 
+<<<<<<< HEAD
+        <TouchableOpacity style={styles.loginBtn} 
+          onPress = {() => navigation.navigate("navPages")}>
+=======
         <TouchableOpacity style={styles.loginBtn} onPress = {() => this.login(this.state.email,this.state.password)}>
+>>>>>>> f4a815da8e4c8c9d2595dacdbe108164c00513a4
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
       
