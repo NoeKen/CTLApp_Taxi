@@ -1,19 +1,49 @@
 import React from 'react';
-import { Button,Text, View , TextInput, TouchableOpacity} from 'react-native';
+import { Button,Text, View , TextInput, TouchableOpacity, ScrollView} from 'react-native';
 import styles from './style'
 
+import auth from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/firestore';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
  
- const LoginPage = ({navigation}) =>{
-    
-  state={
+class LoginPage extends React.Component{
+  
+  constructor(){
+    super();
+    this.state={
       email:"",
-      password:""
-    }
-    
+      password:"",
+    };
+  }
+
+    login(email,password){
+      try{
+          if((this.state.email =="" && this.state.password =="") ||(this.state.email=="") || (this.state.password=="") ){
+              alert('Values does not be empty')
+          }
+          else {
+              if(this.state.password.length < 8){
+              alert('Enter at least height caracters as password');
+              }else{
+                  auth().signInWithEmailAndPassword(email,password)
+                  alert('signin succeded')
+                  this.props.navigation.navigate("navPages")
+              }
+          }
+      }
+      catch(error){
+        console.log(error)
+          alert(error)
+      }
+  }
+
+    render(){
     return (
       
       <View style={styles.container}>
+        <ScrollView>
+
         <View >
           <Text style = {styles.Title}>
             Hey, welcome
@@ -23,10 +53,12 @@ import styles from './style'
            Right away !
           </Text>
         </View>
+
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
             placeholder="Email"
+            keyboardType = "email-address"
             numberOfLines={1} 
             placeholderTextColor="#003f5c"
             onChangeText={text => this.setState({email:text})}/>
@@ -37,27 +69,37 @@ import styles from './style'
             style={styles.inputText}
             placeholder="Password"
             numberOfLines={1}
+            secureTextEntry = {true}
             placeholderTextColor="#003f5c"
-            onChangeText={text => this.setState({password:text})}/>
+            onChangeText={password => this.setState({password:password})}/>
         </View>
 
         <TouchableOpacity style={styles.forgot}
-          onPress = {()=> navigation.navigate('resetPass')}
+          onPress = {() => this.props.navigation.navigate('resetPass')}
         >
           <Text style={styles.forgotText} >Forgot Password?</Text>
         </TouchableOpacity>
 
+<<<<<<< HEAD
         <TouchableOpacity style={styles.loginBtn} 
           onPress = {() => navigation.navigate("navPages")}>
+=======
+        <TouchableOpacity style={styles.loginBtn} onPress = {() => this.login(this.state.email,this.state.password)}>
+>>>>>>> f4a815da8e4c8c9d2595dacdbe108164c00513a4
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.loginBtn} onPress = {() => navigation.navigate.goBack()}>
-          <Text style={styles.loginText}>Go Back</Text>
-        </TouchableOpacity>
+      
+
+        <Button
+          title = "Back to main"
+          onPress = {() => this.props.navigation.navigate('navPages')}
+        />
+
+        </ScrollView>
       </View>
+      
     ); 
-    
+    }
 }
 
 

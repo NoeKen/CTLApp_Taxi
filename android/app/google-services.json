@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "123438582711",
+    "project_id": "uberclone-cd0ab",
+    "storage_bucket": "uberclone-cd0ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123438582711:android:e8c001d533ad62ff24b632",
+        "android_client_info": {
+          "package_name": "com.ctlapp_taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123438582711-djj2rjijff5po8mt4b21cjsmr1ovgb5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp_2jLSr8t6rmrNZTkJrYuHQnePXGQk7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123438582711-djj2rjijff5po8mt4b21cjsmr1ovgb5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,6 +11,8 @@ import Welcome from "../authentication/welcome/welcomepage";
 import SetProfile from "../authentication/registration/setProfile/setProfile";
 import emailVerification from "../authentication/emailVerification/verifyYourMails";
 import resetPass from "../authentication/resetPassword/resetpass";
+import ClientForm from "./task/forms/addClients"
+import VehiculeForm from "./task/forms/addVehicules";
 //import TabBarTop from "@react-navigation/material-top-tabs/lib/typescript/src/views/MaterialTopTabBar";
 
 const Stack = createStackNavigator();
@@ -32,6 +34,8 @@ export default function Parent() {
       <Stack.Screen name="SetProfile" component={SetProfile}/>
       <Stack.Screen name="emailVerification" component={emailVerification}/>
       <Stack.Screen name="resetPass" component={resetPass}/>
+      <Stack.Screen name="ClientForm" component={ClientForm}/>
+      <Stack.Screen name="VehiculeForm" component={VehiculeForm}/>
     </Stack.Navigator>
   );
 }

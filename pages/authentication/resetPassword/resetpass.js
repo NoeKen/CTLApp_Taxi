@@ -25,7 +25,7 @@ import styles from './style';
                     
                     <TextInput  
                         style={styles.inputText}
-                        placeholder="email" 
+                        placeholder="Email" 
                         numberOfLines={1}
                         placeholderTextColor="#003f5c"
                         onChangeText={text => this.setState({email:text})}
@@ -38,13 +38,10 @@ import styles from './style';
                         <Text style={styles.registerText}>Reset</Text>
                     </TouchableOpacity>
                 </View>
-
             </View>
         ); 
         }
     }
-
-
 
 
 export default resetPass;

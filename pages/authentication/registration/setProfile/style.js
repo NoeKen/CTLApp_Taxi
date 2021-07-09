@@ -13,14 +13,14 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:50,
         color:"#fb5b5a",
-        marginBottom:40,
+        marginBottom: 30,
         alignItems : 'center',
         
     },
     
   inputView:{
     width:"100%",
-    backgroundColor:"#FFE4E1",
+    backgroundColor:"rgba(255, 234, 242, 1)",
     borderRadius:10,
     height:65,
     marginBottom:20,
@@ -30,19 +30,17 @@ const styles = StyleSheet.create({
     paddingHorizontal : 20,
     color:"black",
     fontSize : 20,
-    fontWeight : 'bold',
   },
   Title : {
     color : '#FF237B',
     fontSize : 30,
     fontWeight : 'bold',
     alignItems : 'center',
-    marginBottom : 30,
-    marginTop : 10,
+    marginBottom : 50,
     textAlign : 'center'
   },
   subTitle : {
-    marginBottom: 40,
+    marginBottom: 20,
     fontSize : 20,
     color : 'black',
     fontFamily : 'arial',
@@ -68,7 +66,7 @@ const styles = StyleSheet.create({
     borderStyle : 'solid',
     borderWidth : 1,
     borderRadius:15,
-    height:55,
+    height:45,
     justifyContent:"center",
     alignItems : 'center',
   },

@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         paddingHorizontal : 20,
         color:"black",
         fontSize : 20,
-        fontWeight : 'bold',
       },
       resetBtn:{
         width:"100%",
