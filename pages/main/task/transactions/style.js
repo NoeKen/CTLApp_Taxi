@@ -20,9 +20,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     shadowColor: 'black',
     elevation: 6,
-    minHeight: 60,
-    minWidth: 280,
-    position: 'absolute',
+
   },
 
   taxiText: {
