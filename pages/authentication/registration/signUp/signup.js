@@ -4,13 +4,20 @@ import { Avatar } from 'react-native-paper';
 import styles from './style';
 
 import auth from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/firestore';
 
  class SignupPage extends React.Component{
  
-    state={
-      email:"",
-      password:""
-    }
+    constructor(){
+        super();
+        this.dbRef = firebase.firestore().collection('users')
+        this.state={
+          email:"",
+          password:"",
+          isLoading : false
+        };
+      }
+      
     signup(email,password){
         try{
             if((this.state.email =="" && this.state.password =="") ||(this.state.email=="") || (this.state.password=="") ){
@@ -21,14 +28,15 @@ import auth from '@react-native-firebase/auth';
                 alert('Enter at least height caracters');
                 }else{
                     auth().createUserWithEmailAndPassword(this.state.email,this.state.password);
-                    this.props.navigation.navigate('Login')
+                    this.props.navigation.navigate('SetProfile')
                 }
             }
         }
         catch(error){
-            alert(error.toString)
+            
         }
     }
+
     render(){
         return (
         
@@ -48,6 +56,7 @@ import auth from '@react-native-firebase/auth';
                         style={styles.inputText}
                         placeholder="Email" 
                         numberOfLines={1}
+                        keyboardType = "email-address"
                         /* value = "somme thing" (to dispaly it in the input */
                         placeholderTextColor="#003f5c"
                         onChangeText={email => this.setState({email:email})}
@@ -60,7 +69,6 @@ import auth from '@react-native-firebase/auth';
                         style={styles.inputText}
                         placeholder="Password"
                         numberOfLines={1}
-                        value = ""
                         placeholderTextColor="#003f5c"
                         onChangeText={text => this.setState({password:text})}
                     />
@@ -73,7 +81,6 @@ import auth from '@react-native-firebase/auth';
                 <TouchableOpacity 
                     style={styles.registerBtn}
                     onPress = {
-                        ()=> this.props.navigation.navigate("SetProfile"),
                         ()=> console.log(this.state.email,this.state.password),
                         ()=> this.signup(this.state.email,this.state.password)
                     }

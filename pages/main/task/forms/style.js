@@ -1,6 +1,18 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  container : {
+    flex : 1,
+    alignContent : 'center'
+  },
+  Title : {
+    color : 'rgb(250,30,120)',
+    fontSize : 40,
+    fontWeight : 'bold',
+    alignItems : 'center',
+    marginBottom : 50,
+    textAlign : 'center'
+  },
   inputView:{
     width:"100%",
     // backgroundColor:"#FFE4E1",
@@ -30,6 +42,30 @@ const styles = StyleSheet.create({
     marginBottom:5,
     justifyContent:"center",
   },
+  buttonsLogin:{
+    backgroundColor : 'rgb(250,30,120)',
+    width:"100%",
+    borderRadius:40,
+    height:70,
+    alignItems:"center",
+    justifyContent:"center",
+    marginTop: 20,
+},
+buttonsRegister:{
+  backgroundColor : '#4E23FF',
+  width:"100%",
+  borderRadius:40,
+  height:70,
+  marginVertical:20,
+  alignItems:"center",
+  justifyContent:"center",
+
+},
+textLogin :  {
+  color : 'white',
+  fontWeight : 'bold',
+  fontSize : 25,
+},
 
   //contenaire de la photo
   photocon : {

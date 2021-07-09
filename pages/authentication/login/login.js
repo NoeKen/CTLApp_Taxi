@@ -2,34 +2,39 @@ import React from 'react';
 import { Button,Text, View , TextInput, TouchableOpacity, ScrollView} from 'react-native';
 import styles from './style'
 
+import auth from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/firestore';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
  
 class LoginPage extends React.Component{
-    
-  state={
+  
+  constructor(){
+    super();
+    this.state={
       email:"",
-      password:""
-    }
+      password:"",
+    };
+  }
 
-    signup(email,password){
+    login(email,password){
       try{
           if((this.state.email =="" && this.state.password =="") ||(this.state.email=="") || (this.state.password=="") ){
               alert('Values does not be empty')
           }
           else {
               if(this.state.password.length < 8){
-              alert('Enter at least height caracters');
+              alert('Enter at least height caracters as password');
               }else{
-                  auth().signInWithEmailAndPassword(this.state.email,this.state.password)
-                  .then(function(user){
-                    alert(user)
-                  })
+                  auth().signInWithEmailAndPassword(email,password)
+                  alert('signin succeded')
+                  this.props.navigation.navigate("navPages")
               }
           }
       }
       catch(error){
-        console.log(error.toString)
-          alert(error.value)
+        console.log(error)
+          alert(error)
       }
   }
 
@@ -75,13 +80,14 @@ class LoginPage extends React.Component{
           <Text style={styles.forgotText} >Forgot Password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.loginBtn} onPress = {() => this.props.navigation.navigate("navPages")}>
+        <TouchableOpacity style={styles.loginBtn} onPress = {() => this.login(this.state.email,this.state.password)}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
+      
 
         <Button
           title = "Back to main"
-          onPress = {() => this.props.navigation.navigate("navPages")}
+          onPress = {() => this.props.navigation.navigate('navPages')}
         />
 
         </ScrollView>

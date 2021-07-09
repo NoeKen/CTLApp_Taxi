@@ -64,13 +64,13 @@ const Transaction = ({route, navigation}) => {
       </View>
 
       <View style={styles.cont}>
-        <View style={styles.container}>
+        <View style={styles.container} onPress={() => navigation.navigate('VehiculesList')}>
           <View style={styles.taxiname}>
             <Text style={styles.taxiText}>Active Taxi Name</Text>
           </View>
           <TouchableOpacity
             style={styles.taximg}
-            onPress={() => navigation.navigate('VehiculesList')}>
+            >
             <Image
               source={require('../../../../assets/images.jpeg')}
               style={styles.backgroundImage}
