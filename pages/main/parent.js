@@ -13,6 +13,7 @@ import emailVerification from "../authentication/emailVerification/verifyYourMai
 import resetPass from "../authentication/resetPassword/resetpass";
 import ClientForm from "./task/forms/addClients"
 import VehiculeForm from "./task/forms/addVehicules";
+import Destination from "./task/forms/destination";
 //import TabBarTop from "@react-navigation/material-top-tabs/lib/typescript/src/views/MaterialTopTabBar";
 
 const Stack = createStackNavigator();
@@ -36,6 +37,7 @@ export default function Parent() {
       <Stack.Screen name="resetPass" component={resetPass}/>
       <Stack.Screen name="ClientForm" component={ClientForm}/>
       <Stack.Screen name="VehiculeForm" component={VehiculeForm}/>
+      <Stack.Screen name="Destination" component={Destination}/>
     </Stack.Navigator>
   );
 }

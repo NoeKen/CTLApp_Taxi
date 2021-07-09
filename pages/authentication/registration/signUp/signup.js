@@ -26,7 +26,8 @@ import { firebase } from '@react-native-firebase/firestore';
                 if(this.state.password.length < 8){
                 alert('Enter at least height caracters');
                 }else{
-                    auth().createUserWithEmailAndPassword(this.state.email,this.state.password);
+                    auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
+                    auth().currentUser.sendEmailVerification().then(()=>this.props.navigation.navigate('emailVerification'))
                     this.props.navigation.navigate('SetProfile')
                 }
             }

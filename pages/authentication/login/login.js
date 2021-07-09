@@ -27,9 +27,11 @@ class LoginPage extends React.Component{
               alert('Enter at least height caracters as password');
               }else{
                   auth().signInWithEmailAndPassword(email,password)
-                  alert('signin succeded')
-                  this.props.navigation.navigate("navPages")
-              }
+                  if(auth().currentUser.emailVerified)
+                    this.props.navigation.navigate("navPages")
+                  else
+                    alert('Email is not verified')
+                  }
           }
       }
       catch(error){
