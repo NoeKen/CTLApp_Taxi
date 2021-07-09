@@ -35,6 +35,7 @@ const NavPages = () => {
             activeBackgroundColor: '#ff237b',
             activeTintColor: 'white',
             inactiveTintColor: 'black',
+            
           }}>
           <Tab.Screen name="Dashboard" component={DashboardPage} />
           <Tab.Screen name="Tasks" component={Transaction} />

@@ -10,7 +10,6 @@ import { firebase } from '@react-native-firebase/firestore';
  
     constructor(){
         super();
-        this.dbRef = firebase.firestore().collection('users')
         this.state={
           email:"",
           password:"",
